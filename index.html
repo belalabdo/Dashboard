@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/tables.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="loadingSrceen">
+      <div class="loader">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+        <div class="bar bar4"></div>
+        <div class="bar bar5"></div>
+        <div class="bar bar6"></div>
+        <div class="bar bar7"></div>
+        <div class="bar bar8"></div>
+      </div>
+    </div>
+    <div class="pageTitle p-4">
+      <h3>Dashboard</h3>
+      <p class="path">
+        <span class="notVisited">
+          <a href="index.html">Home</a>
+        </span>
+        /
+        <span class="visited">dashboard</span>
+      </p>
+    </div>
+    <div class="container-fluid user-select-none d-flex flex-wrap px-4">
+      <div class="row mx-auto mx-md-0 col-lg-8">
+        <div class="item col-md mb-4">
+          <div class="cardaya p-3">
+            <div class="title d-flex justify-content-between">
+              <p>Sales<span> | Today</span></p>
+              <div class="dropdown">
+                <div onclick="toggleDropdown(this)" class="m-1 dropbtn">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div id="myDropdown" class="dropdown-content">
+                  <p class="text-info m-0 text-uppercase">Filter</p>
+                  <a href="#">Today</a>
+                  <a href="#">This Month</a>
+                  <a href="#">This Year</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-content d-flex justify-content-start">
+              <div class="icon-1 rounded-pill">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </div>
+              <div class="card-info ms-3">
+                <h2 class="card-val">145</h2>
+                <p class="card-perc">
+                  <span class="text-success fw-bold">12%</span> increase
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item col-md mb-4">
+          <div class="cardaya p-3">
+            <div class="title d-flex justify-content-between">
+              <p>Revenue<span> | This Month</span></p>
+              <div class="dropdown">
+                <div onclick="toggleDropdown(this)" class="m-1 dropbtn">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div id="myDropdown" class="dropdown-content">
+                  <p class="text-info m-0 text-uppercase">Filter</p>
+                  <a href="#">Today</a>
+                  <a href="#">This Month</a>
+                  <a href="#">This Year</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-content d-flex justify-content-start">
+              <div class="icon-2 rounded-pill">
+                <i class="fa-solid fa-dollar-sign"></i>
+              </div>
+              <div class="card-info ms-3">
+                <h2 class="card-val">$<span>3,264</span></h2>
+                <p class="card-perc">
+                  <span class="increase fw-bold">8%</span> increase
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item col-xxl-4 xol-xl-12 mb-4">
+          <div class="cardaya p-3">
+            <div class="title d-flex justify-content-between">
+              <p>Customers<span> | This Year</span></p>
+              <div class="dropdown">
+                <div onclick="toggleDropdown(this)" class="m-1 dropbtn">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div id="myDropdown" class="dropdown-content">
+                  <p class="text-info m-0 text-uppercase">Filter</p>
+                  <a href="#">Today</a>
+                  <a href="#">This Month</a>
+                  <a href="#">This Year</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-content d-flex justify-content-start">
+              <div class="icon-3 rounded-pill">
+                <i class="fa-solid fa-user-group"></i>
+              </div>
+              <div class="card-info ms-3">
+                <h2 class="card-val">1244</h2>
+                <p class="card-perc">
+                  <span class="decrease fw-bold">12%</span> decrease
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chart-item mb-4">
+          <div class="chartContainer p-3">
+            <div class="title mb-2 d-flex justify-content-between">
+              <belal>Reports<span> | Today</span></belal>
+              <div>
+                <div onclick="toggleDropdown(this)" class="m-1 dropbtn">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div id="myDropdown" class="dropdown-content">
+                  <p class="text-info m-0 text-uppercase">Filter</p>
+                  <a href="#">Today</a>
+                  <a href="#">This Month</a>
+                  <a href="#">This Year</a>
+                </div>
+              </div>
+            </div>
+            <div class="chart"></div>
+          </div>
+        </div>
+        <div class="simple-table-item mb-4">
+          <div class="tableContainer p-4">
+            <div class="title mb-2 d-flex justify-content-between">
+              <belal>Recent Sales<span> | Today</span></belal>
+              <div>
+                <div onclick="toggleDropdown(this)" class="m-1 dropbtn">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div id="myDropdown" class="dropdown-content">
+                  <p class="text-info m-0 text-uppercase">Filter</p>
+                  <a href="#">Today</a>
+                  <a href="#">This Month</a>
+                  <a href="#">This Year</a>
+                </div>
+              </div>
+            </div>
+            <table id="myTable">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Customer</th>
+                  <th>Product</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#3651</td>
+                  <td>Belal</td>
+                  <td>Dish Washer</td>
+                  <td>$4000</td>
+                </tr>
+                <tr>
+                  <td>#3457</td>
+                  <td>Hamza</td>
+                  <td>Laundry</td>
+                  <td>$8000</td>
+                </tr>
+                <tr>
+                  <td>#5679</td>
+                  <td>Ammar</td>
+                  <td>microwave</td>
+                  <td>$5000</td>
+                </tr>
+                <tr>
+                  <td>#5357</td>
+                  <td>Ahmed</td>
+                  <td>cooler</td>
+                  <td>$6000</td>
+                </tr>
+                <tr>
+                  <td>#6789</td>
+                  <td>Mohamed</td>
+                  <td>warming machine</td>
+                  <td>$500</td>
+                </tr>
+                <tr>
+                  <td>#2468</td>
+                  <td>Mahmoud</td>
+                  <td>baker</td>
+                  <td>$6000</td>
+                </tr>
+                <tr>
+                  <td>#3467</td>
+                  <td>kyrollos</td>
+                  <td>bicycle</td>
+                  <td>$3500</td>
+                </tr>
+                <tr>
+                  <td>#2344</td>
+                  <td>Sho'eeb</td>
+                  <td>door</td>
+                  <td>$400</td>
+                </tr>
+                <tr>
+                  <td>#1458</td>
+                  <td>Omar</td>
+                  <td>TV</td>
+                  <td>$7500</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="static-table-item mb-4">
+          <div class="staticTableConatainer p-4">
+            <div class="title d-flex justify-content-between">
+              <p>Top Selling<span> | Today</span></p>
+              <div class="dropdown">
+                <div onclick="toggleDropdown(this)" class="m-1 dropbtn">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div id="myDropdown" class="dropdown-content">
+                  <p class="text-info m-0 text-uppercase">Filter</p>
+                  <a href="#">Today</a>
+                  <a href="#">This Month</a>
+                  <a href="#">This Year</a>
+                </div>
+              </div>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="rounded-start" scope="col">Preview</th>
+                  <th scope="col">Product</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Sold</th>
+                  <th class="rounded-end" scope="col">Revenue</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    <img class="rounded" src="other/product-1.jpg" alt="" />
+                  </th>
+                  <td>Black Sports Shoes</td>
+                  <td>$64</td>
+                  <td class="fw-bold">124</td>
+                  <td>$5,828</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <img class="rounded" src="other/product-2.jpg" alt="" />
+                  </th>
+                  <td>Red Smart Watch</td>
+                  <td>$46</td>
+                  <td class="fw-bold">98</td>
+                  <td>$4,508</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <img class="rounded" src="other/product-3.jpg" alt="" />
+                  </th>
+                  <td>$59 Tea Face Serum</td>
+                  <td>Gato</td>
+                  <td class="fw-bold">74</td>
+                  <td>$4,366</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <img class="rounded" src="other/product-4.jpg" alt="" />
+                  </th>
+                  <td>Golder Sun Glasses</td>
+                  <td>$32</td>
+                  <td class="fw-bold">63</td>
+                  <td>$2,016</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    <img class="rounded" src="other/product-5.jpg" alt="" />
+                  </th>
+                  <td>Black HeadSet</td>
+                  <td>$97</td>
+                  <td class="fw-bold">41</td>
+                  <td>$3,239</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="row ps-2 col-lg-4 flex-column">
+        <!-- <div class="recentactivityItem col-12">
+          <div class="p-3">
+            <div class="title d-flex justify-content-between">
+              <p>Recent Activity<span> | Today</span></p>
+              <div class="dropdown">
+                <div onclick="toggleDropdown(this)" class="m-1 dropbtn">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div id="myDropdown" class="dropdown-content">
+                  <p class="text-info m-0 text-uppercase">Filter</p>
+                  <a href="#">Today</a>
+                  <a href="#">This Month</a>
+                  <a href="#">This Year</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div class="budgetReportItem mb-4">
+          <div class="p-3">
+            <div class="title d-flex justify-content-between">
+              <p>Budget Report<span> | This Month</span></p>
+              <div class="dropdown">
+                <div onclick="toggleDropdown(this)" class="m-1 dropbtn">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div id="myDropdown" class="dropdown-content">
+                  <p class="text-info m-0 text-uppercase">Filter</p>
+                  <a href="#">Today</a>
+                  <a href="#">This Month</a>
+                  <a href="#">This Year</a>
+                </div>
+              </div>
+            </div>
+            <div class="radar"></div>
+          </div>
+        </div>
+        <div class="websiteTrafficItem">
+          <div class="p-3">
+            <div class="title d-flex justify-content-between">
+              <p>Website Traffic<span> | Today</span></p>
+              <div class="dropdown">
+                <div onclick="toggleDropdown(this)" class="m-1 dropbtn">
+                  <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div id="myDropdown" class="dropdown-content">
+                  <p class="text-info m-0 text-uppercase">Filter</p>
+                  <a href="#">Today</a>
+                  <a href="#">This Month</a>
+                  <a href="#">This Year</a>
+                </div>
+              </div>
+            </div>
+            <div id="dount"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="js/BQ.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/tables.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

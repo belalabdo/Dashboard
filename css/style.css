@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@300;400;500&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@300;400;500&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: #dae5f1;
+  overflow: hidden;
+}
+
+/*
+ * --- Light Mode Styles ---
+ * Box Shadow for light mode babyy: rgb(1 41 112 / 10%);
+ *
+*/
+
+/* .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 8px 20px rgb(1 41 112 / 10%);
+}
+
+.navigation > h1 {
+  font-size: 30px;
+}
+
+.noti,
+.msg {
+  position: relative;
+  font-size: 25px;
+  color: #012970;
+  cursor: pointer;
+}
+
+.noti .count,
+.msg .count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -20%);
+  font-size: 15px;
+}
+
+.profile-dropdown .img {
+  width: 40px;
+}
+
+.profile {
+  position: relative;
+}
+
+.noti-menu {
+  position: absolute;
+}
+
+.profile-dropdown {
+  cursor: pointer;
+}
+
+.menu .menu-option:nth-child(5) {
+  border: none;
+}
+
+.menu {
+  background-color: #e4e4e4;
+  position: absolute;
+  right: 0;
+  top: 115%;
+  box-shadow: 0 5px 30px 0 rgb(82 63 105 / 20%);
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-option {
+  border-bottom: 1px solid rgb(82 63 105 / 20%);
+  cursor: pointer;
+}
+
+.menu-name {
+  font-size: 20px;
+  border-bottom: 1px solid rgb(82 63 105 / 20%);
+  font-weight: 500;
+} */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.visited {
+  color: #51678f;
+}
+
+.notVisited {
+  color: #899bbd;
+  transition: all 0.3s ease;
+}
+
+.notVisited:hover {
+  color: #51678f;
+}
+
+.title span {
+  color: #899bbd;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.title {
+  color: #012970;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.cardaya {
+  border-radius: 11px;
+  background: #dae5f1;
+  box-shadow: 7px 7px 14px #aab3bc, -7px -7px 14px #ffffff;
+}
+
+/* drop down stuff */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  border-radius: 0.375rem;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: 99;
+  background-color: #dae5f1;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  right: 0; /* added property to align dropdown on the right */
+}
+
+.dropdown-content a,
+.dropdown-content p {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.dropdown-content p {
+  font-weight: 600;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* ============ */
+
+.card-content .icon-1,
+.card-content .icon-2,
+.card-content .icon-3 {
+  width: 65px;
+  height: 65px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.increase {
+  color: #198754;
+}
+
+.decrease {
+  color: #dc3545;
+}
+
+.card-content .icon-1 {
+  color: #4154f1;
+  background-color: rgb(13, 202, 240);
+}
+
+.card-content .icon-2 {
+  color: #2eca6a;
+  font-size: 29px;
+
+  background-color: rgb(144, 238, 144, 0.4);
+}
+
+.card-content .icon-3 {
+  color: #ff771d;
+  background-color: #ffecdf;
+}
+
+.chartContainer .chartTitle span,
+.tableTitle span {
+  color: #899bbd;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.chartContainer .chartTitle,
+.tableTitle {
+  position: relative;
+  color: #012970;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.chartContainer,
+.tableContainer,
+.staticTableConatainer,
+.budgetReportItem > div,
+.websiteTrafficItem > div {
+  border-radius: 11px;
+  background: #dae5f1;
+  box-shadow: 7px 7px 14px #aab3bc, -7px -7px 14px #ffffff;
+}
+
+.simple-table-item tbody tr td:first-child,
+.simple-table-item tbody tr td:nth-child(3) {
+  color: blue;
+}
+
+.static-table-item tbody tr td:nth-child(2) {
+  color: blue;
+}
+.static-table-item thead {
+  background-color: #c0ddfb;
+}
+
+th img {
+  max-width: 60px;
+  cursor: pointer;
+}
+
+/* Loader Styles */
+
+.loadingSrceen {
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  background-color: #212121;
+}
+
+.loader {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.bar {
+  width: 10px;
+  height: 70px;
+  background: hsl(0, 100%, 50%);
+  display: inline-block;
+  transform-origin: bottom center;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  animation: loader8913 1.2s linear infinite;
+}
+
+.bar1 {
+  animation-delay: 0.1s;
+}
+
+.bar2 {
+  animation-delay: 0.2s;
+}
+
+.bar3 {
+  animation-delay: 0.3s;
+}
+
+.bar4 {
+  animation-delay: 0.4s;
+}
+
+.bar5 {
+  animation-delay: 0.5s;
+}
+
+.bar6 {
+  animation-delay: 0.6s;
+}
+
+.bar7 {
+  animation-delay: 0.7s;
+}
+
+.bar8 {
+  animation-delay: 0.8s;
+}
+
+@keyframes loader8913 {
+  0% {
+    transform: scaleY(0.1);
+  }
+
+  50% {
+    transform: scaleY(1);
+    background: yellowgreen;
+  }
+
+  100% {
+    transform: scaleY(0.1);
+    background: transparent;
+  }
+}
+
+/* ========== */
+
+#dount {
+  width: 100%;
+}
