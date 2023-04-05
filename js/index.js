@@ -48,13 +48,13 @@ const areaChartOptions = {
         13, 28, 51, 42, 82, 65,
       ],
     },
-    {
-      name: "Customers",
-      data: [
-        15, 11, 32, 18, 9, 24, 50, 11, 12, 52, 25, 16, 40, 43, 22, 40, 50, 40,
-        23, 28, 11, 62, 32, 65,
-      ],
-    },
+    // {
+    //   name: "Customers",
+    //   data: [
+    //     15, 11, 32, 18, 9, 24, 50, 11, 12, 52, 25, 16, 40, 43, 22, 40, 50, 40,
+    //     23, 28, 11, 62, 32, 65,
+    //   ],
+    // },
   ],
   markers: {
     size: 0,
@@ -64,7 +64,7 @@ const areaChartOptions = {
   },
   chart: {
     height: 350,
-    type: "area",
+    type: "bar",
   },
   dataLabels: {
     enabled: false,
@@ -102,16 +102,16 @@ const areaChartOptions = {
       `${today}T23:30:00.000Z`,
     ],
   },
-  fill: {
-    type: "gradient",
-    gradient: {
-      type: "vertical",
-      shadeIntensity: 0.1,
-      opacityFrom: 0.4,
-      opacityTo: 0,
-      stops: [0, 100],
-    },
-  },
+  // fill: {
+  //   type: "gradient",
+  //   gradient: {
+  //     type: "vertical",
+  //     shadeIntensity: 0.1,
+  //     opacityFrom: 0.4,
+  //     opacityTo: 0,
+  //     stops: [0, 100],
+  //   },
+  // },
   tooltip: {
     x: {
       format: "yyyy/MM/dd HH:mm:ss",
